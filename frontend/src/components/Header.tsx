@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MagnetizeButton } from "@/components/ui/magnetize-button"
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
+
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -58,72 +61,8 @@ const Header = () => {
             </div>
 
             {/* NAVBAR */}
-            <nav
-                className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-[#204558]/60 backdrop-blur-md shadow-md" : ""
-                    }`}
-            >
-                <div className="max-w-7xl mx-auto px-4 py-4 md:px-6 sm:px-6 flex items-center justify-between">
-                    {/* Logo + Brand */}
-                    <div className="flex items-center space-x-2">
-                        <img
-                            src="/images/rideline_logo.jpg"
-                            alt="RideLine logo"
-                            className="w-10 h-10 object-contain"
-                        />
-                        <span className="text-[#f3f3ed] text-xl font-bold tracking-wide">
-                            RideLine
-                        </span>
-                    </div>
-
-                    {/* Desktop nav */}
-                    <div className="hidden md:flex items-center space-x-8">
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className="text-[#f3f3ed] hover:text-[#6da4be] transition-colors duration-200 text-base font-medium"
-                            >
-                                {link.name}
-                            </a>
-                        ))}
-                    </div>
-
-                    {/* Login (desktop) */}
-                    <div className="hidden md:block">
-                        <button className="bg-[#f3f3ed] text-[#204558] px-5 py-2 rounded-full font-semibold hover:bg-[#d6dce2] transition duration-200">
-                            Login
-                        </button>
-                    </div>
-
-                    {/* Mobile toggle */}
-                    <button
-                        className="md:hidden text-[#f3f3ed] focus:outline-none"
-                        onClick={toggleMenu}
-                        aria-label="Toggle menu"
-                    >
-                        {isOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
-                    </button>
-                </div>
-
-                {/* Mobile menu */}
-                {isOpen && (
-                    <div className="md:hidden mt-2 bg-[#204558] bg-opacity-90 rounded-lg px-4 pb-4 space-y-3">
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className="block text-[#f3f3ed] hover:text-[#c0d2db] text-base"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {link.name}
-                            </a>
-                        ))}
-                        <button className="w-full bg-[#f3f3ed] text-[#204558] px-5 py-2 rounded-full font-semibold hover:bg-[#d6dce2] transition duration-200">
-                            Login
-                        </button>
-                    </div>
-                )}
-            </nav>
+            {/* Includi Navbar qui */}
+            <Navbar />
 
             {/* Hero Text */}
             {/* Hero Text strutturata in 3 fasce verticali */}

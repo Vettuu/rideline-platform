@@ -3,6 +3,7 @@ import Header from "@/components/Header";
  import ChiSiamoSection from "@/components/ChiSiamoSection";
  import IntroViaggi from "@/components/IntroViaggi";
  import Viaggi from "@/components/Viaggi";
+ import RichiestaViaggio from "@/components/RichiestaViaggio";
  import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -33,6 +34,14 @@ export default function HomePage() {
         className="px-4 py-12 sm:py-16"
       >
         <Viaggi />
+      </section>
+
+      {/* Sezione "Form di richiesta viaggio iniziale" */}
+      <section
+        id="RichiestaViaggio"
+        className="px-4 py-12 sm:py-16"
+      >
+        <RichiestaViaggio />
       </section>
 
       {/* Footer */}

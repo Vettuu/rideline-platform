@@ -92,7 +92,7 @@ export default function Footer4Col() {
                 alt="logo"
                 className="h-18 w-18 rounded-full"
               />
-              <span className="text-5xl font-semibold mt-3">
+              <span className="text-5xl font-semibold mt-3 text-[#f3f3ed]">
                 {data.company.name}
               </span>
             </div>

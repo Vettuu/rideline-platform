@@ -67,23 +67,23 @@ const Card: FC<iCardProps> = ({
         </CardHoverRevealMain>
 
 
-<CardHoverRevealContent className="w-[90%] max-w-md rounded-xl bg-[#f3f2ee]/40 text-[#204558] backdrop-blur-lg">
+<CardHoverRevealContent className="w-[30%] max-w-md rounded-xl bg-[#f3f2ee]/40 text-[#204558] backdrop-blur-lg">
   <div className="space-y-4 text-base">
     {extraInfo?.destination && (
       <p className="flex items-start gap-3">
         <MapPin size={26} className="text-[#204558] mt-1" />
-        <span className="text-[#204558] text-2xl font-bold">{extraInfo.destination}</span>
+        <span className="text-[#204558] text-xl font-bold">{extraInfo.destination}</span>
       </p>
     )}
     {extraInfo?.durata && (
       <p className="flex items-start gap-3">
         <Clock size={26} className="text-[#204558] mt-1" />
-        <span className="text-[#204558] text-2xl font-bold">{extraInfo.durata}</span>
+        <span className="text-[#204558] text-xl font-bold">{extraInfo.durata}</span>
       </p>
     )}
     {extraInfo?.highlights?.length > 0 && (
       <div className="flex items-start gap-3">
-        <ul className="list-disc list-inside text-[#204558] text-2xl font-bold">
+        <ul className="list-disc list-inside text-[#204558] text-xl font-bold">
           {extraInfo.highlights.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
